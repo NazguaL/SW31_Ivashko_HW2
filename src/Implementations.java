@@ -45,4 +45,20 @@ public class Implementations {
         }
     }
 
-}
+    public void arrIsSort(int [] a) {
+
+        boolean Sorted = true;
+        int i = 0;
+
+        while (Sorted == true && i < a.length-1) {
+                if (a[i] > a[i + 1]) Sorted = false;
+                i++;
+        }
+        if (Sorted == false) {System.out.println("The array isn't sorted in ascending order.");}
+        else {System.out.println("The array is sorted in ascending order.");}
+        }
+
+
+    }
+
+

@@ -29,7 +29,11 @@ public class Main {
         int [] d = {20, 0, 15, 30, 30, 40, 30, 0};
         Implementations arrWithZeroCall = new  Implementations();
         arrWithZeroCall.arrWithZero(d);
-        //
+        //isSorted
+        int [] e = {10, 20, 25, 30, 35, 40, 45, 100};
+        Implementations arrIsSortCall = new  Implementations();
+        arrWithZeroCall.arrIsSort(e);
+
     }
 }
 

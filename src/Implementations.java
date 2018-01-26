@@ -39,10 +39,34 @@ public class Implementations {
             for (int j = 0; j < result.length; j++) {
                 System.out.print((result[j]+1) + " ");
             }
+            System.out.println("");
         }
         else {
             System.out.println("There are no \"zero\" elements in the array!");
         }
+    }
+
+    public void arrPosNeg(int [] a)
+    {
+        int flag = 0;
+        int i = 0;
+        while ( flag == 0 && i < a.length) {
+
+            if (a[i] > 0) {
+                flag = 1;
+            }
+            else if (a[i] < 0) {
+                flag = -1;
+            }
+            else {
+                flag = 0;
+            }
+            i++;
+        }
+        System.out.println("");
+        if (flag == 1) { System.out.println("Positive");}
+        else if (flag == -1) {System.out.println("Negative");}
+        else {System.out.println("Array containts no elements or only zero elements");}
     }
 
     public void arrIsSort(int [] a) {

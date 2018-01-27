@@ -2,7 +2,9 @@
  * Created by User on 24.01.2018.
  */
 public class Implementations {
-    public void printSrtHW () {System.out.println("Hello, World!!!");}
+    public void printSrtHW () {
+        System.out.println("Hello, World!!!");
+    }
 
     public int minOfTwo(int a, int b)
     {

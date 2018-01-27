@@ -40,7 +40,7 @@ public class Main {
         arrPosNegCall.arrPosNeg(e);
         //isSorted
         /* 5. Дан массив чисел. Выяснить, отсортирован ли он по возрастанию.*/
-        int [] f = {10, 20, 25, 30, 35, 40, 45, 100};
+        int [] f = {10, 20, 25, 30, 35, 40, 45, 100, 200};
         Implementations arrIsSortCall = new  Implementations();
         arrIsSortCall.arrIsSort(f);
 

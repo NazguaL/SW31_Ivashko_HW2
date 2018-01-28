@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SW31_Ivashko_HW2.iml" filepath="$PROJECT_DIR$/SW31_Ivashko_HW2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-selenium-start.iml" filepath="$PROJECT_DIR$/.idea/modules/java-selenium-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-selenium-start_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-selenium-start_main.iml" group="java-selenium-start" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-selenium-start_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-selenium-start_test.iml" group="java-selenium-start" />
     </modules>
   </component>
 </project>

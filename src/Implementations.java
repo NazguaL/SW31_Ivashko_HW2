@@ -84,8 +84,59 @@ public class Implementations {
         else {System.out.println("The array is sorted in ascending order.");}
         }
 
+    public int [] arrEven (int [] a) {
 
+    int count = 0;
+        for (int i = 0 ; i < a.length ; i++){
+        if ((a[i]%2) == 0) {count++;}
+    }
+
+    if (count == 0) return null;
+
+    //    System.out.println(count);
+    // Признайтесь честно, алертами код дебажили?))
+
+    //if (count == 0) return null;
+
+        int[] result = new int[count];
+        int index = 0;
+        for (int i = 0; i < a.length; i++) {
+            if ((a[i]%2) == 0) {
+                result[index] = a[i];
+            index++; }
 
     }
+    return result;
+    }
+
+    public int [][] arrReplaceZ (int [] a, int z) {
+        int l = a.length;
+
+        int [][] result = new int [2][];
+        result [0] = new int [l];
+        result [1] = new int [1];
+
+        int count =0;
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] > z) {result [0][i] = z; count++;}
+            else {result [0][i] = a[i];}
+
+        }
+        result [1][0] = count;
+        return result;
+    }
+
+    public int [] arrPosZerNeg (int [] a) {
+        int [] result = new int [3];
+        int l = a.length;
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] < 0) {result[0]++;}
+            else if (a[i] == 0) {result[1]++;}
+            else {result[2]++;}
+        }
+        return result;
+    }
+}
+
 
 

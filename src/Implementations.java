@@ -213,6 +213,20 @@ public class Implementations {
         return result;
     }
 
+    public long arrIntProduct (int [] a, int m) {
+        int l = a.length;
+        long result = 1;
+        int count = 0;
+        for (int i = 0; i < l; i++) {
+            if (a[i] > m) {
+                result = result * a[i];
+                count++;
+            }
+        }
+        if (count == 0) {result = -1;}
+        return result;
+    }
+
 }
 
 

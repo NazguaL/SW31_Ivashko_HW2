@@ -113,6 +113,7 @@ public class Main {
         Implementations arrPrintMLCall = new  Implementations();
         arrPrintMLCall.arrPrintML(arr11, m11, l11);
         System.out.println();
+        System.out.println();
 
         /*12. Дан массив чисел. Поменять местами соседние элементы (а[0] и а[1], а[2] и а[3].*/
         System.out.println("12. Дан массив чисел. Поменять местами соседние элементы (а[0] и а[1], а[2] и а[3].:");
@@ -124,12 +125,14 @@ public class Main {
             System.out.print((mas12[m]) + " ");
         }
         System.out.println();
+        System.out.println();
 
         /*13. Дан массив чисел, среди которых имеется один нуль. Вывести на печать все числа, включительно до нуля.*/
         System.out.println("13. Дан массив чисел, среди которых имеется один нуль. Вывести на печать все числа, включительно до нуля.:");
         int [] arr13 = {1, 3, 2, 5, 3, 0, 4, 7};
         Implementations arrPrintTillZeroCall = new  Implementations();
         arrPrintTillZeroCall.arrPrintTillZero(arr13);
+        System.out.println();
         System.out.println();
 
         /* 14. Дан массив чисел. Найти  mаx(а[0], а[2], ..., а[2к]) + min(а[1], а[3], …, а[2к-1]). */
@@ -139,8 +142,17 @@ public class Main {
         int [] mas14 = arrMinMaxCall.arrMinMax(arr14);
         System.out.println("mаx(а[0], а[2], ..., а[2к]): " + mas14[0]);
         System.out.println("min(а[1], а[3], …, а[2к-1]): " + mas14[1]);
-        
+        System.out.println();
+
         /*15. Дан массив целых положительных чисел. Найти произведение только тех чисел, которые больше заданного числа М. Если таких нет, то выдать сообщение об этом.*/
+        System.out.println("15. Дан массив целых положительных чисел. Найти произведение только тех чисел, которые больше заданного числа М. Если таких нет, то выдать сообщение об этом.:");
+        int [] arr15 = {3000, 1000, 25, 30, 35, 400, 45, 100, 8000, 7, 10000};
+        int m15 = 2000;
+        Implementations arrIntProductCall = new  Implementations();
+        long a15 = arrIntProductCall.arrIntProduct(arr15,m15);
+        if (a15 == -1) {System.out.println("There are no numbers more than "+ m15 + " in te array.");}
+        else {System.out.println("Production of numbers more than " + m15 +  " is: " + a15);}
+
     }
 }
 

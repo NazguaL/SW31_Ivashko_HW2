@@ -136,6 +136,83 @@ public class Implementations {
         }
         return result;
     }
+
+    public int [] arrMinMaxRotate (int [] a) {
+        int l = a.length;
+        int [] result = new int [l];
+        int maxindex = 0;
+        int minindex = 0;
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] > a[maxindex]) {maxindex = i;}
+            if (a[i] < a[minindex]) {minindex = i;}
+        }
+        int temp = a[maxindex];
+        a[maxindex] =  a[minindex];
+        a[minindex] = temp;
+
+        return a;
+    }
+
+    public void arrPrintI (int [] a, int i) {
+        for (int m = 0 ; m <= i ; m++) {
+            System.out.print((a[m]) + " ");
+
+        }
+    }
+
+    public void arrPrintML (int [] a, int m, int l) {
+        int k = a.length;
+        for (int i= 0 ; i < k ; i++) {
+            if (a[i]%m == l) {
+            System.out.print((a[i]) + " ");
+            }
+        }
+    }
+
+    public int [] arrRevert2 (int [] a) {
+        int k = a.length;
+        int temp;
+        for (int i= 1 ; i < k ; i = i + 2) {
+            temp = a[i];
+            a[i] = a[i - 1];
+            a[i - 1] = temp;
+        }
+        return a;
+    }
+
+    public void arrPrintTillZero (int [] a) {
+        int count = 0;
+        int l = a.length;
+        while (count < l && a[count] != 0) {
+            System.out.print(a[count] + " ");
+            count++;
+        }
+
+
+    }
+
+    public int [] arrMinMax (int [] a) {
+        int [] result = new int [2];
+        int l = a.length;
+        int maxindex = 0;
+        int minindex = 0;
+        for (int i = 0 ; i < l ; i = i + 2) {
+            if (a[i] > a[maxindex]) {maxindex = i;}
+            //if (a[i] < a[minindex]) {minindex = i;}
+        }
+
+
+        for (int i = 1 ; i < l - 1 ; i = i + 2) {
+            //if (a[i] > a[maxindex]) {maxindex = i;}
+            if (a[i] < a[minindex]) {minindex = i;}
+        }
+
+
+        result [0] = a[maxindex];
+        result [1] = a[minindex];
+        return result;
+    }
+
 }
 
 

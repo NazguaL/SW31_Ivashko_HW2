@@ -76,12 +76,71 @@ public class Main {
 
         /* 8. Дан массив чисел. Подсчитать, сколько в нем отрицательных, положительных и нулевых
         элементов.*/
+        System.out.println();
+        System.out.println("8. Дан массив чисел. Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов:");
         int [] n = {-10, 0, 25, 30, 35, 40, 45, 100, 200};
         Implementations arrPosZerNegCall = new  Implementations();
         int [] o = arrPosZerNegCall.arrPosZerNeg(n);
         System.out.println("There are negative numbers count in the array: " + o[0]);
         System.out.println("There are zero numbers count in the array: " + o[1]);
         System.out.println("There are positive numbers count in the array: " + o[2]);
+
+        /*9. Дан массив чисел. Поменять местами наибольший и наименьший элементы.*/
+        int [] m9 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000};
+        System.out.println("9. Дан массив чисел. Поменять местами наибольший и наименьший элементы.:");
+        Implementations arrMinMaxRotateCall = new  Implementations();
+        int [] a9 = arrMinMaxRotateCall.arrMinMaxRotate(m9);
+        System.out.println("There are following numbers in the new array:");
+        int l9 = a9.length;
+        for (int m = 0 ; m <l9 ; m++) {
+            System.out.print((a9[m]) + " ");
+        }
+        System.out.println();
+
+        /*10. Дан массив. Вывести на печать только те числа, для которых выполняется условие arr[i] ≤ i.*/
+        int [] m10 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000};
+        System.out.println("10. Дан массив. Вывести на печать только те числа, для которых выполняется условие arr[i] ≤ i.:");
+        Implementations arrPrintICall = new  Implementations();
+        int i10 = 5;
+        arrPrintICall.arrPrintI(m10,i10);
+        System.out.println();
+
+        /*11. Дан массив чисел. Вывести те числа, у которых остаток от деления на число М равен L.*/
+        System.out.println("11. Дан массив чисел. Вывести те числа, у которых остаток от деления на число М равен L.:");
+        int [] arr11 = {1, 3, 2, 5, 3, 4};
+        int m11 = 2;
+        int l11 = 1;
+        Implementations arrPrintMLCall = new  Implementations();
+        arrPrintMLCall.arrPrintML(arr11, m11, l11);
+        System.out.println();
+
+        /*12. Дан массив чисел. Поменять местами соседние элементы (а[0] и а[1], а[2] и а[3].*/
+        System.out.println("12. Дан массив чисел. Поменять местами соседние элементы (а[0] и а[1], а[2] и а[3].:");
+        int [] arr12 = {1, 3, 2, 5, 3, 4, 7};
+        Implementations arrRevert2Call = new  Implementations();
+        int [] mas12 = arrRevert2Call.arrRevert2(arr12);
+        int l12 = mas12.length;
+        for (int m = 0 ; m <l12 ; m++) {
+            System.out.print((mas12[m]) + " ");
+        }
+        System.out.println();
+
+        /*13. Дан массив чисел, среди которых имеется один нуль. Вывести на печать все числа, включительно до нуля.*/
+        System.out.println("13. Дан массив чисел, среди которых имеется один нуль. Вывести на печать все числа, включительно до нуля.:");
+        int [] arr13 = {1, 3, 2, 5, 3, 0, 4, 7};
+        Implementations arrPrintTillZeroCall = new  Implementations();
+        arrPrintTillZeroCall.arrPrintTillZero(arr13);
+        System.out.println();
+
+        /* 14. Дан массив чисел. Найти  mаx(а[0], а[2], ..., а[2к]) + min(а[1], а[3], …, а[2к-1]). */
+        System.out.println("14. Дан массив чисел. Найти  mаx(а[0], а[2], ..., а[2к]) + min(а[1], а[3], …, а[2к-1]).:");
+        int [] arr14 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000, 7, 10000};
+        Implementations arrMinMaxCall = new  Implementations();
+        int [] mas14 = arrMinMaxCall.arrMinMax(arr14);
+        System.out.println("mаx(а[0], а[2], ..., а[2к]): " + mas14[0]);
+        System.out.println("min(а[1], а[3], …, а[2к-1]): " + mas14[1]);
+        
+        /*15. Дан массив целых положительных чисел. Найти произведение только тех чисел, которые больше заданного числа М. Если таких нет, то выдать сообщение об этом.*/
     }
 }
 

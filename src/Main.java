@@ -2,7 +2,9 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         //TestSyntax
+        System.out.println("TestSyntax.:");
         /*  class ClassName{
             public ClassName(){
             }
@@ -15,8 +17,10 @@ public class Main {
             } */
         Implementations TestSyntaxCall = new Implementations();
         TestSyntaxCall.printSrtHW();
+
         /* 1. Дано два числа. Найти минимальное число из них.*/
         //minOfTwo
+
         int a = 3000;
         int b = 3001;
         Implementations miOfTwoCall = new Implementations();
@@ -84,6 +88,7 @@ public class Main {
         System.out.println("There are negative numbers count in the array: " + o[0]);
         System.out.println("There are zero numbers count in the array: " + o[1]);
         System.out.println("There are positive numbers count in the array: " + o[2]);
+        System.out.println();
 
         /*9. Дан массив чисел. Поменять местами наибольший и наименьший элементы.*/
         int [] m9 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000};
@@ -96,6 +101,7 @@ public class Main {
             System.out.print((a9[m]) + " ");
         }
         System.out.println();
+        System.out.println();
 
         /*10. Дан массив. Вывести на печать только те числа, для которых выполняется условие arr[i] ≤ i.*/
         int [] m10 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000};
@@ -103,6 +109,7 @@ public class Main {
         Implementations arrPrintICall = new  Implementations();
         int i10 = 5;
         arrPrintICall.arrPrintI(m10,i10);
+        System.out.println();
         System.out.println();
 
         /*11. Дан массив чисел. Вывести те числа, у которых остаток от деления на число М равен L.*/
@@ -152,7 +159,58 @@ public class Main {
         long a15 = arrIntProductCall.arrIntProduct(arr15,m15);
         if (a15 == -1) {System.out.println("There are no numbers more than "+ m15 + " in te array.");}
         else {System.out.println("Production of numbers more than " + m15 +  " is: " + a15);}
+        System.out.println();
 
+        /* 16. Дан массив положительных и отрицательных чисел.  Заменить нулями те числа, величина которых по модулю больше максимального числа.*/
+        System.out.println("16. Дан массив положительных и отрицательных чисел.  Заменить нулями те числа, величина которых по модулю больше максимального числа.:");
+        int [] arr16 = {3000, 1000, 25, 30, 35, 400, 45, 100, -8000, 7, -10000};
+        Implementations arrABSMaxToZeroCall = new  Implementations();
+        int [] a16 = arrABSMaxToZeroCall.arrABSMaxToZero(arr16);
+        int l16 = a16.length;
+        System.out.println("There are following numbers in the new array:");
+        for (int m = 0 ; m <l16 ; m++) {
+            System.out.print((a16[m]) + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+        /*17. Дан массив чисел с положительными и отрицательными элементы. Вычислить произведение отрицательных элементов P1 и произведение положительных элементов Р2.
+        Сравнить модуль Р 2  с модулем Р 1  и указать, какое из произведений по модулю больше.*/
+        System.out.println("17. Дан массив чисел с положительными и отрицательными элементы. Вычислить произведение отрицательных элементов P1 и произведение положительных элементов Р2.\n" +
+                "Сравнить модуль Р 2  с модулем Р 1  и указать, какое из произведений по модулю больше.:");
+        int [] arr17 = {3000, 1000, 25, 30, 35, 400, 45, 100, -8000, 7, -10000};
+        Implementations arrP1P2Call = new  Implementations();
+        long [] a17 = arrP1P2Call.arrP1P2(arr17);
+        System.out.println("P1 is equals to: " + a17[1]);
+        System.out.println("P2 is equals to: " + a17[2]);
+        if (a17[0] == 0) {System.out.println("Module of P1 is higher than module of P2");}
+        else {System.out.println("Module of P2 is higher than module of P1");}
+        System.out.println();
+
+        /* 18. Дан массив чисел. Среди них есть равные. Найти первый максимальный элемент массива и заменить его нулем.*/
+        int [] arr18 = {3000, 1000, 25, 30, 35, 400, 45, 100, 8000, 7, 8000};
+        System.out.println("18. Дан массив чисел. Среди них есть равные. Найти первый максимальный элемент массива и заменить его нулем.:");
+        Implementations arrReplaceMax2ZeroCall = new  Implementations();
+        int [] a18 = arrReplaceMax2ZeroCall.arrReplaceMax2Zero(arr18);
+        System.out.println("There are following numbers in the new array:");
+        int l18 = a18.length;
+        for (int m = 0 ; m <l18 ; m++) {
+            System.out.print((a18[m]) + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+        /*19. Дан массив чисел. Образовать новый массив, элементами которого будут элементы исходного, оканчивающиеся на цифру k.:*/
+        int [] arr19 = {3001, 1002, 25, 33, 35, 404, 45, 106, 8007, 7, 8008};
+        System.out.println("19. Дан массив чисел. Образовать новый массив, элементами которого будут элементы исходного, оканчивающиеся на цифру k.");
+        Implementations newArrBasedOnKCall = new  Implementations();
+        int k19 = 1;
+        int [] a19 = newArrBasedOnKCall.newArrBasedOnK(arr19, k19);
+        int l19 = a19.length;
+        for (int m = 0 ; m <l19 ; m++) {
+            System.out.print((a19[m]) + " ");
+    }
+        System.out.println();
     }
 }
 

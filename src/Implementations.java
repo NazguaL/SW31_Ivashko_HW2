@@ -227,6 +227,76 @@ public class Implementations {
         return result;
     }
 
+    public int [] arrABSMaxToZero (int [] a) {
+        int l = a.length;
+        int maxindex = 0;
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] > a[maxindex]) {
+                maxindex = i;
+            }
+        }
+        for (int i = 0 ; i < l ; i++) {
+            if ((Math.abs(a[i])) > a[maxindex]) {a[i] = 0;}
+        }
+        return a;
+    }
+
+    public long [] arrP1P2 (int [] a) {
+        long [] result = new long [3];
+        int l = a.length;
+        long P1 = 1;
+        long P2 = 1;
+        int flag = 1;
+
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] < 0) { P1 = P1 * a[i];}
+            if (a[i] > 0) { P2 = P2 * a[i];}
+        }
+
+        if ( (Math.abs(P1)) > (Math.abs(P2)) ) { flag = 0; }
+
+        result [0] = flag;
+        result [1] = P1;
+        result [2] = P2;
+        return result;
+    }
+
+    public int [] arrReplaceMax2Zero (int [] a) {
+        int l = a.length;
+        int maxindex = 0;
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] > a[maxindex]) {maxindex = i;}
+        }
+        int maxvalue = a[maxindex];
+        for (int i = 0 ; i < l ; i++) {
+            if (a[i] == maxvalue) {
+              a[i] = 0;
+                break;
+            }
+        }
+        return a;
+    }
+
+    public int [] newArrBasedOnK (int [] a, int k) {
+        int l = a.length;
+        int count1 = 0;
+
+        for (int i = 0; i < l; i++) {
+            if ((a[i])% 10 == k) {
+                count1++;
+            }
+        }
+        int[] result = new int[count1];
+        int count2 = 0;
+        for (int i = 0; i < l; i++) {
+            if ((a[i])% 10 == k) {
+                result[count2] = a[i];
+                count2++;
+            }
+        }
+
+    return result;
+    }
 }
 
 

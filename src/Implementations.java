@@ -16,7 +16,7 @@ public class Implementations {
     {
         int result = 0;
         for (int i = 0 ; i < a.length ; i++){
-            if (a[i] == k) {result = result + k;}
+            if ((a[i])%k == 0) {result = result + a[i];}
         }
         return result;
     }
@@ -139,7 +139,7 @@ public class Implementations {
 
     public int [] arrMinMaxRotate (int [] a) {
         int l = a.length;
-        int [] result = new int [l];
+
         int maxindex = 0;
         int minindex = 0;
         for (int i = 0 ; i < l ; i++) {
@@ -154,9 +154,8 @@ public class Implementations {
     }
 
     public void arrPrintI (int [] a, int i) {
-        for (int m = 0 ; m <= i ; m++) {
-            System.out.print((a[m]) + " ");
-
+        for (int m = 0 ; m < a.length ; m++) {
+            if ((a[m]) <= i) {System.out.print((a[m]) + " ");}
         }
     }
 
@@ -184,9 +183,12 @@ public class Implementations {
         int count = 0;
         int l = a.length;
         while (count < l && a[count] != 0) {
-            System.out.print(a[count] + " ");
             count++;
         }
+        for (int i = 0; i <= count; i++) {
+            System.out.print(a[i] + " ");
+        }
+
 
 
     }
@@ -196,17 +198,17 @@ public class Implementations {
         int l = a.length;
         int maxindex = 0;
         int minindex = 0;
-        for (int i = 0 ; i < l ; i = i + 2) {
-            if (a[i] > a[maxindex]) {maxindex = i;}
-            //if (a[i] < a[minindex]) {minindex = i;}
+        for (int i = 1 ; i < l ; i = i + 2) {
+            if (a[(i-1)] > a[maxindex]) {maxindex = (i-1);}
+            if (a[(i)] < a[minindex]) {minindex = i;}
         }
 
-
+/*
         for (int i = 1 ; i < l - 1 ; i = i + 2) {
             //if (a[i] > a[maxindex]) {maxindex = i;}
             if (a[i] < a[minindex]) {minindex = i;}
         }
-
+*/
 
         result [0] = a[maxindex];
         result [1] = a[minindex];

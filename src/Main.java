@@ -144,7 +144,7 @@ public class Main {
 
         /* 14. Дан массив чисел. Найти  mаx(а[0], а[2], ..., а[2к]) + min(а[1], а[3], …, а[2к-1]). */
         System.out.println("14. Дан массив чисел. Найти  mаx(а[0], а[2], ..., а[2к]) + min(а[1], а[3], …, а[2к-1]).:");
-        int [] arr14 = {3000, -1000, 25, 30, 35, 400, 45, 100, -8000, 7, 10000};
+        int [] arr14 = {-100, 3000, -1000, 25, 30, 35, 400, 45, 100, -8000, 7, 10000};
         Implementations arrMinMaxCall = new  Implementations();
         int [] mas14 = arrMinMaxCall.arrMinMax(arr14);
         System.out.println("mаx(а[0], а[2], ..., а[2к]): " + mas14[0]);
